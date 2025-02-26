@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+    <title>Send Feedback</title>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted on GitHub Pages!</p>
+    <h2>Send Feedback</h2>
+    <form action="https://formspree.io/f/xanqgzde" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-    <!-- Video Embed -->
-    <video width="640" height="360" controls>
-        <source src="myvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Feedback</button>
+    </form>
 </body>
 </html>
