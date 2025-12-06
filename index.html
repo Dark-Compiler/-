@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Feedback</title>
+    <title>Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Send Feedback</h2>
-    <form action="https://formspree.io/f/xanqgzde" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+    <header>
+        <h1>My Responsive Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+    <main>
+        <section class="hero">
+            <h2>Welcome!</h2>
+            <p>This website works on mobile and PC.</p>
+        </section>
+        <section class="content">
+            <p>Some content goes here.</p>
+        </section>
+    </main>
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit">Send Feedback</button>
-    </form>
+    <footer>
+        <p>© 2025 My Website</p>
+    </footer>
 </body>
 </html>
