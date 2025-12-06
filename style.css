@@ -1,49 +1,133 @@
-/* Reset some default styles */
+/* ---------------------------
+   RESET DEFAULT STYLES
+--------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Header styles */
+/* ---------------------------
+   HEADER
+--------------------------- */
 header {
     background-color: #333;
     color: white;
     padding: 1rem;
 }
 
+header h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 header nav ul {
-    display: flex;
     list-style: none;
-    gap: 1rem;
+    display: flex;
+    flex-direction: column; /* mobile-first */
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
 }
 
 header nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-/* Main content */
+header nav a:hover {
+    background-color: #555;
+}
+
+/* ---------------------------
+   MAIN CONTENT
+--------------------------- */
 main {
     padding: 2rem;
 }
 
+/* Hero section */
 .hero {
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
     padding: 2rem;
     text-align: center;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
-/* Footer */
+.hero h2 {
+    margin-bottom: 1rem;
+}
+
+/* Content section */
+.content {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ---------------------------
+   FOOTER
+--------------------------- */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* ---------------------------
+   IMAGES
+--------------------------- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ---------------------------
+   MEDIA QUERIES FOR PC
+--------------------------- */
+@media (min-width: 768px) {
+    header nav ul {
+        flex-direction: row; /* horizontal menu */
+        justify-content: center;
+    }
+
+    .hero {
+        text-align: left;
+    }
+
+    main {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .hero, .content {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
 }
